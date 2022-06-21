@@ -39,7 +39,7 @@ public class Main {
         List<RequestCats> cats = mapper.readValue(
                 response.getEntity().getContent(), new TypeReference<List<RequestCats>>() {});
         cats.stream()
-                .filter(value -> value.getUpvotes() != null)
+                .filter(value -> value.getUpvotes() > 0)
                 .forEach(System.out::println);
     }
 }
