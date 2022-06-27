@@ -7,14 +7,14 @@ public class RequestCats {
     private final String text; //сообщение
     private final String type; //тип животного
     private final String user; //имя пользователя
-    private final int upvotes; //голоса
+    private final Integer upvotes; //голоса
 
     public RequestCats(
             @JsonProperty("id") String id,
             @JsonProperty("text") String text,
             @JsonProperty("type") String type,
             @JsonProperty("user") String user,
-            @JsonProperty("upvotes") int upvotes) {
+            @JsonProperty("upvotes") Integer upvotes) {
         this.id = id;
         this.text = text;
         this.type = type;
@@ -38,7 +38,7 @@ public class RequestCats {
         return user;
     }
 
-    public int getUpvotes() {
+    public Integer getUpvotes() {
         return upvotes;
     }
 
